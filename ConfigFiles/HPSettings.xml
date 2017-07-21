@@ -1,0 +1,31 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>16.0</Version>
+<LvVariant>
+<Name>Value</Name>
+<Cluster>
+<Name>HPSettings</Name>
+<NumElts>3</NumElts>
+<Cluster>
+<Name>ILCSettings</Name>
+<NumElts>2</NumElts>
+<U8>
+<Name>Subnet</Name>
+<Val>0</Val>
+</U8>
+<U8>
+<Name>Address</Name>
+<Val>1</Val>
+</U8>
+</Cluster>
+<I16>
+<Name>ID</Name>
+<Val>1</Val>
+</I16>
+<I32>
+<Name>ReferencePosition</Name>
+<Val>0</Val>
+</I32>
+</Cluster>
+</LvVariant>
+</LVData>

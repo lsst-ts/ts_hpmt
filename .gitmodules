@@ -1,0 +1,27 @@
+[submodule "common_rt_failc"]
+	path = common_rt_failc
+	url = https://stash.lsstcorp.org/scm/ts/common_rt_failc.git
+[submodule "common_rt_ilc"]
+	path = common_rt_ilc
+	url = https://stash.lsstcorp.org/scm/ts/common_rt_ilc.git
+[submodule "common_rt_fpga"]
+	path = common_rt_fpga
+	url = https://stash.lsstcorp.org/scm/ts/common_rt_fpga.git
+[submodule "common_rt_modbus"]
+	path = common_rt_modbus
+	url = https://stash.lsstcorp.org/scm/ts/common_rt_modbus.git
+[submodule "common_configurationeditor"]
+	path = common_configurationeditor
+	url = https://stash.lsstcorp.org/scm/ts/common_configurationeditor.git
+[submodule "common_configurationreader"]
+	path = common_configurationreader
+	url = https://stash.lsstcorp.org/scm/ts/common_configurationreader.git
+[submodule "common_serialprotocols"]
+	path = common_serialprotocols
+	url = https://stash.lsstcorp.org/scm/ts/common_serialprotocols.git
+[submodule "common_simulators_simulateserialdata"]
+	path = common_simulators_simulateserialdata
+	url = https://stash.lsstcorp.org/scm/ts/common_simulators_simulateserialdata.git
+[submodule "common_rt_hpilc"]
+	path = common_rt_hpilc
+	url = https://stash.lsstcorp.org/scm/ts/common_rt_hpilc.git
