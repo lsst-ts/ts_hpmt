@@ -25,3 +25,6 @@
 [submodule "common_rt_hpilc"]
 	path = common_rt_hpilc
 	url = https://stash.lsstcorp.org/scm/ts/common_rt_hpilc.git
+[submodule "Common_RT_DLRS1ADisplacementGauge"]
+	path = Common_RT_DLRS1ADisplacementGauge
+	url = https://stash.lsstcorp.org/scm/ts/Common_RT_DLRS1ADisplacementGauge.git
