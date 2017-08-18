@@ -24,14 +24,17 @@
 		<Item Name="Commands" Type="Folder">
 			<Item Name="Command Factory.lvclass" Type="LVClass" URL="../Commands/Command Factory/Command Factory.lvclass"/>
 			<Item Name="Command.lvclass" Type="LVClass" URL="../Commands/Command/Command.lvclass"/>
+			<Item Name="Complete Manual Command.lvclass" Type="LVClass" URL="../Commands/Complete Manual Command/Complete Manual Command.lvclass"/>
 			<Item Name="Complete Testing Command.lvclass" Type="LVClass" URL="../Commands/Complete Testing Command/Complete Testing Command.lvclass"/>
 			<Item Name="Disable Command.lvclass" Type="LVClass" URL="../Commands/Disable Command/Disable Command.lvclass"/>
 			<Item Name="Enable Command.lvclass" Type="LVClass" URL="../Commands/Enable Command/Enable Command.lvclass"/>
+			<Item Name="Manual Mode Command.lvclass" Type="LVClass" URL="../Commands/Manual Mode Command/Manual Mode Command.lvclass"/>
+			<Item Name="Move Steps Command.lvclass" Type="LVClass" URL="../Commands/Move Steps Command/Move Steps Command.lvclass"/>
 			<Item Name="Shutdown Command.lvclass" Type="LVClass" URL="../Commands/Shutdown Command/Shutdown Command.lvclass"/>
 			<Item Name="Standby Command.lvclass" Type="LVClass" URL="../Commands/Standby Command/Standby Command.lvclass"/>
 			<Item Name="Start Command.lvclass" Type="LVClass" URL="../Commands/Start Command/Start Command.lvclass"/>
 			<Item Name="Start Testing Command.lvclass" Type="LVClass" URL="../Commands/Start Testing Command/Start Testing Command.lvclass"/>
-			<Item Name="Test One Test Command.lvclass" Type="LVClass" URL="../Commands/Test One Test Command/Test One Test Command.lvclass"/>
+			<Item Name="Stiffness Test Command.lvclass" Type="LVClass" URL="../Commands/Test One Test Command/Stiffness Test Command.lvclass"/>
 			<Item Name="Update Command.lvclass" Type="LVClass" URL="../Commands/Update Command/Update Command.lvclass"/>
 		</Item>
 		<Item Name="ConfigFiles" Type="Folder" URL="../ConfigFiles">
@@ -64,6 +67,7 @@
 			<Item Name="Disabled State.lvclass" Type="LVClass" URL="../States/Disabled State/Disabled State.lvclass"/>
 			<Item Name="Enabled State.lvclass" Type="LVClass" URL="../States/Enabled State/Enabled State.lvclass"/>
 			<Item Name="Fault State.lvclass" Type="LVClass" URL="../States/Fault State/Fault State.lvclass"/>
+			<Item Name="Manual State.lvclass" Type="LVClass" URL="../States/Manual State/Manual State.lvclass"/>
 			<Item Name="Offline State.lvclass" Type="LVClass" URL="../States/Offline State/Offline State.lvclass"/>
 			<Item Name="Standby State.lvclass" Type="LVClass" URL="../States/Standby State/Standby State.lvclass"/>
 			<Item Name="State Factory.lvclass" Type="LVClass" URL="../States/State Factory/State Factory.lvclass"/>
@@ -78,11 +82,13 @@
 		<Item Name="ConfigurationReader.lvclass" Type="LVClass" URL="../Common_ConfigurationReader/ConfigurationReader.lvclass"/>
 		<Item Name="HPMT_Typedefs.lvlib" Type="Library" URL="../Typedefs/HPMT_Typedefs.lvlib"/>
 		<Item Name="HPMT_Views.lvlib" Type="Library" URL="../View/HPMT_Views.lvlib"/>
+		<Item Name="RTASGS1ALVDT.lvlib" Type="Library" URL="../RTASGS1ALVDT.lvlib"/>
+		<Item Name="RTDLRS1ADisplacementGauge.lvlib" Type="Library" URL="../Common_RT_DLRS1ADisplacementGauge/RTDLRS1ADisplacementGauge.lvlib"/>
 		<Item Name="RTFPGA.lvlib" Type="Library" URL="../common_rt_fpga/RTFPGA.lvlib"/>
 		<Item Name="RTHPILC.lvlib" Type="Library" URL="../common_rt_hpilc/RTHPILC.lvlib"/>
 		<Item Name="RTILC.lvlib" Type="Library" URL="../common_rt_ilc/RTILC.lvlib"/>
 		<Item Name="RTModbus.lvlib" Type="Library" URL="../common_rt_modbus/RTModbus.lvlib"/>
-		<Item Name="SerialProtocols.lvlib" Type="Library" URL="../Common_SerialProtocols/SerialProtocols.lvlib"/>
+		<Item Name="SerialProtocols.lvlib" Type="Library" URL="../common_serialprotocols/SerialProtocols.lvlib"/>
 		<Item Name="SimulateSerialData.lvclass" Type="LVClass" URL="../common_simulators_simulateserialdata/SimulateSerialData.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">

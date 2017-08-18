@@ -11,6 +11,7 @@
 	<Item Name="HardwareSettings.ctl" Type="VI" URL="../HardwareSettings.ctl"/>
 	<Item Name="LoadCellSettings.ctl" Type="VI" URL="../LoadCellSettings.ctl"/>
 	<Item Name="LogPath.ctl" Type="VI" URL="../LogPath.ctl"/>
+	<Item Name="Number Of Steps.ctl" Type="VI" URL="../Number Of Steps.ctl"/>
 	<Item Name="Publish Data Events.ctl" Type="VI" URL="../Publish Data Events.ctl"/>
 	<Item Name="ScanProgress.ctl" Type="VI" URL="../ScanProgress.ctl"/>
 	<Item Name="SerialSettings.ctl" Type="VI" URL="../SerialSettings.ctl"/>

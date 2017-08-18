@@ -8,6 +8,7 @@
 	<Item Name="Fault View.vi" Type="VI" URL="../Fault View.vi"/>
 	<Item Name="HPMT_View.vi" Type="VI" URL="../HPMT_View.vi"/>
 	<Item Name="hpmtViewRTM.rtm" Type="Document" URL="../hpmtViewRTM.rtm"/>
+	<Item Name="Manual View.vi" Type="VI" URL="../Manual View.vi"/>
 	<Item Name="Scan Control View.vi" Type="VI" URL="../Scan Control View.vi"/>
 	<Item Name="Scan Status View.vi" Type="VI" URL="../Scan Status View.vi"/>
 	<Item Name="Set Control Visibility.vi" Type="VI" URL="../Set Control Visibility.vi"/>

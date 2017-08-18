@@ -5,11 +5,17 @@
 <Name>Value</Name>
 <Cluster>
 <Name>Connection Settings</Name>
-<NumElts>1</NumElts>
+<NumElts>2</NumElts>
 <Refnum>
 <Name>ILC Port</Name>
 <RefKind>VISA</RefKind>
-<Val></Val>
+<Val>COM4</Val>
+</Refnum>
+<Refnum>
+<Name>Displacment Port
+</Name>
+<RefKind>VISA</RefKind>
+<Val>COM3</Val>
 </Refnum>
 </Cluster>
 </LvVariant>
