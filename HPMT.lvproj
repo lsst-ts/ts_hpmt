@@ -12,6 +12,7 @@
 		<Property Name="IOScan.Priority" Type="UInt">9</Property>
 		<Property Name="IOScan.ReportModeConflict" Type="Bool">true</Property>
 		<Property Name="IOScan.StartEngineOnDeploy" Type="Bool">false</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -26,6 +27,7 @@
 			<Item Name="Command.lvclass" Type="LVClass" URL="../Commands/Command/Command.lvclass"/>
 			<Item Name="Complete Manual Command.lvclass" Type="LVClass" URL="../Commands/Complete Manual Command/Complete Manual Command.lvclass"/>
 			<Item Name="Complete Testing Command.lvclass" Type="LVClass" URL="../Commands/Complete Testing Command/Complete Testing Command.lvclass"/>
+			<Item Name="Constant Query Command.lvclass" Type="LVClass" URL="../Commands/Constant Query Command/Constant Query Command.lvclass"/>
 			<Item Name="Disable Command.lvclass" Type="LVClass" URL="../Commands/Disable Command/Disable Command.lvclass"/>
 			<Item Name="Enable Command.lvclass" Type="LVClass" URL="../Commands/Enable Command/Enable Command.lvclass"/>
 			<Item Name="Manual Mode Command.lvclass" Type="LVClass" URL="../Commands/Manual Mode Command/Manual Mode Command.lvclass"/>
@@ -35,7 +37,10 @@
 			<Item Name="Start Command.lvclass" Type="LVClass" URL="../Commands/Start Command/Start Command.lvclass"/>
 			<Item Name="Start Testing Command.lvclass" Type="LVClass" URL="../Commands/Start Testing Command/Start Testing Command.lvclass"/>
 			<Item Name="Stiffness Test Command.lvclass" Type="LVClass" URL="../Commands/Test One Test Command/Stiffness Test Command.lvclass"/>
+			<Item Name="Stop Constant Query Command.lvclass" Type="LVClass" URL="../Commands/Stop Constant Query Command/Stop Constant Query Command.lvclass"/>
 			<Item Name="Update Command.lvclass" Type="LVClass" URL="../Commands/Update Command/Update Command.lvclass"/>
+			<Item Name="Search For Zero.lvclass" Type="LVClass" URL="../Commands/Search For Zero Command/Search For Zero.lvclass"/>
+			<Item Name="Stop Search For Zero.lvclass" Type="LVClass" URL="../Commands/Stop Search For Zero Command/Stop Search For Zero.lvclass"/>
 		</Item>
 		<Item Name="ConfigFiles" Type="Folder" URL="../ConfigFiles">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -90,6 +95,7 @@
 		<Item Name="RTModbus.lvlib" Type="Library" URL="../common_rt_modbus/RTModbus.lvlib"/>
 		<Item Name="SerialProtocols.lvlib" Type="Library" URL="../common_serialprotocols/SerialProtocols.lvlib"/>
 		<Item Name="SimulateSerialData.lvclass" Type="LVClass" URL="../common_simulators_simulateserialdata/SimulateSerialData.lvclass"/>
+		<Item Name="Globals.vi" Type="VI" URL="../Globals.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
@@ -173,68 +179,127 @@
 				<Property Name="Destination[2].destName" Type="Str">ConfigFiles</Property>
 				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/FAMT/ConfigFiles</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{2A30870A-78BB-442B-8500-9D211D1860D5}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0E5E1F9A-2EB6-4578-9115-B8FC75403894}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
-				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref"></Property>
-				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="Source[10].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[10].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[10].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[10].itemID" Type="Ref">/My Computer/Controller</Property>
-				<Property Name="Source[10].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[10].type" Type="Str">Container</Property>
-				<Property Name="Source[11].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[11].itemID" Type="Ref"></Property>
-				<Property Name="Source[11].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[11].type" Type="Str">VI</Property>
-				<Property Name="Source[12].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[12].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Status View.vi</Property>
-				<Property Name="Source[12].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[12].type" Type="Str">VI</Property>
-				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
-				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
-				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
-				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/ConfigFiles</Property>
-				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[2].type" Type="Str">Container</Property>
+				<Property Name="Source[1].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[1].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/ConfigFiles</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Container</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
 				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib</Property>
-				<Property Name="Source[3].Library.allowMissingMembers" Type="Bool">true</Property>
-				<Property Name="Source[3].type" Type="Str">Library</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Application Control View.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
 				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[4].itemID" Type="Ref"></Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Fault View.vi</Property>
 				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[4].type" Type="Str">VI</Property>
 				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[5].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Application Control View.vi</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Control View.vi</Property>
 				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="Source[6].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[6].Container.depDestIndex" Type="Int">0</Property>
 				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[6].itemID" Type="Ref"></Property>
-				<Property Name="Source[6].lvfile" Type="Bool">true</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/Controller</Property>
 				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">Container</Property>
 				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[7].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Fault View.vi</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Status View.vi</Property>
 				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="Source[7].type" Type="Str">VI</Property>
-				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[8].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Control View.vi</Property>
-				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[8].type" Type="Str">VI</Property>
-				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[9].itemID" Type="Ref"></Property>
-				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
-				<Property Name="Source[9].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">13</Property>
+				<Property Name="SourceCount" Type="Int">8</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">FAMT</Property>
 				<Property Name="TgtF_internalName" Type="Str">FAMT</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2016 </Property>
 				<Property Name="TgtF_productName" Type="Str">FAMT</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{08A39201-F3B9-47E2-AA82-352AF503CD77}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">FAMT.exe</Property>
+			</Item>
+			<Item Name="Hard Point Testing" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{E8E680E7-F85F-4BAE-A843-6147258B3E15}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{68A46A03-6627-427B-8FCE-AAC655AE946B}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.LSST.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{3990A5C2-5675-4AB5-9481-33D2EF641BF1}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Hard Point Testing</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Hard Point Testing</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{702D0B5D-0094-4579-AAB6-4BA6735D45DF}</Property>
+				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">HPMT.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Hard Point Testing/HPMT.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Hard Point Testing/data</Property>
+				<Property Name="Destination[2].destName" Type="Str">Config Files</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Config Files</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{0E5E1F9A-2EB6-4578-9115-B8FC75403894}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/HPMT_View.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Application Control View.vi</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Fault View.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Manual View.vi</Property>
+				<Property Name="Source[4].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[4].type" Type="Str">VI</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Control View.vi</Property>
+				<Property Name="Source[5].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Scan Status View.vi</Property>
+				<Property Name="Source[6].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[6].type" Type="Str">VI</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/Test View.vi</Property>
+				<Property Name="Source[7].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[7].type" Type="Str">VI</Property>
+				<Property Name="Source[8].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[8].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/My Computer/ConfigFiles</Property>
+				<Property Name="Source[8].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[8].type" Type="Str">Container</Property>
+				<Property Name="Source[9].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[9].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[9].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[9].itemID" Type="Ref">/My Computer/Controller</Property>
+				<Property Name="Source[9].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[9].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">10</Property>
+				<Property Name="TgtF_companyName" Type="Str">LSST</Property>
+				<Property Name="TgtF_enableDebugging" Type="Bool">true</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Hard Point Testing</Property>
+				<Property Name="TgtF_internalName" Type="Str">Hard Point Testing</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2017 LSST</Property>
+				<Property Name="TgtF_productName" Type="Str">Hard Point Testing</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{24C32BCE-9D99-4351-BC54-3F6CC9A70F05}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">HPMT.exe</Property>
 			</Item>
 		</Item>
 	</Item>

@@ -16,6 +16,7 @@
 	<Item Name="ScanProgress.ctl" Type="VI" URL="../ScanProgress.ctl"/>
 	<Item Name="SerialSettings.ctl" Type="VI" URL="../SerialSettings.ctl"/>
 	<Item Name="StateTypes.ctl" Type="VI" URL="../StateTypes.ctl"/>
+	<Item Name="Stop Constant Query.ctl" Type="VI" URL="../Stop Constant Query.ctl"/>
 	<Item Name="Subscribe Data Events.ctl" Type="VI" URL="../Subscribe Data Events.ctl"/>
 	<Item Name="TestData.ctl" Type="VI" URL="../TestData.ctl"/>
 	<Item Name="TestLogTypes.ctl" Type="VI" URL="../TestLogTypes.ctl"/>

@@ -9,7 +9,7 @@
 <Refnum>
 <Name>ILC Port</Name>
 <RefKind>VISA</RefKind>
-<Val>COM4</Val>
+<Val>COM6</Val>
 </Refnum>
 <Refnum>
 <Name>Displacment Port
