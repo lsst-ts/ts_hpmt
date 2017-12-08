@@ -238,7 +238,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{702D0B5D-0094-4579-AAB6-4BA6735D45DF}</Property>
-				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.build" Type="Int">6</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">HPMT.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Hard Point Testing/HPMT.exe</Property>
@@ -249,7 +249,7 @@
 				<Property Name="Destination[2].destName" Type="Str">Config Files</Property>
 				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Config Files</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{0E5E1F9A-2EB6-4578-9115-B8FC75403894}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{780C8026-333A-486D-B532-22CA4C6FC715}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/HPMT_Views.lvlib/HPMT_View.vi</Property>
